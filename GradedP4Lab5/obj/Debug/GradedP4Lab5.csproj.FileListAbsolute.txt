@@ -1,0 +1,13 @@
+h:\Windows7\Documents\Visual Studio 2012\Projects\GradedP4Lab5\GradedP4Lab5\bin\Debug\GradedP4Lab5.exe.config
+h:\Windows7\Documents\Visual Studio 2012\Projects\GradedP4Lab5\GradedP4Lab5\bin\Debug\GradedP4Lab5.exe
+h:\Windows7\Documents\Visual Studio 2012\Projects\GradedP4Lab5\GradedP4Lab5\bin\Debug\GradedP4Lab5.pdb
+h:\Windows7\Documents\Visual Studio 2012\Projects\GradedP4Lab5\GradedP4Lab5\obj\Debug\GradedP4Lab5.csprojResolveAssemblyReference.cache
+h:\Windows7\Documents\Visual Studio 2012\Projects\GradedP4Lab5\GradedP4Lab5\obj\Debug\MainWindow.baml
+h:\Windows7\Documents\Visual Studio 2012\Projects\GradedP4Lab5\GradedP4Lab5\obj\Debug\MainWindow.g.cs
+h:\Windows7\Documents\Visual Studio 2012\Projects\GradedP4Lab5\GradedP4Lab5\obj\Debug\App.g.cs
+h:\Windows7\Documents\Visual Studio 2012\Projects\GradedP4Lab5\GradedP4Lab5\obj\Debug\GradedP4Lab5_MarkupCompile.cache
+h:\Windows7\Documents\Visual Studio 2012\Projects\GradedP4Lab5\GradedP4Lab5\obj\Debug\GradedP4Lab5.g.resources
+h:\Windows7\Documents\Visual Studio 2012\Projects\GradedP4Lab5\GradedP4Lab5\obj\Debug\GradedP4Lab5.Properties.Resources.resources
+h:\Windows7\Documents\Visual Studio 2012\Projects\GradedP4Lab5\GradedP4Lab5\obj\Debug\GradedP4Lab5.csproj.GenerateResource.Cache
+h:\Windows7\Documents\Visual Studio 2012\Projects\GradedP4Lab5\GradedP4Lab5\obj\Debug\GradedP4Lab5.exe
+h:\Windows7\Documents\Visual Studio 2012\Projects\GradedP4Lab5\GradedP4Lab5\obj\Debug\GradedP4Lab5.pdb

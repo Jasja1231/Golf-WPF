@@ -1,0 +1,42 @@
+﻿<Window x:Class="GradedP4Lab5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+
+    <Grid RenderTransformOrigin="-0.226,0.603">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="98*"/>
+            <ColumnDefinition Width="67*"/>
+        </Grid.ColumnDefinitions>
+
+        <Slider Name="sizeSlider" Grid.Row="1" Grid.Column="0" Value="0" Orientation="Vertical"/>
+
+        <Canvas MouseDown="Canvas_MouseDown_1" Height="200" Width="200"  Name="Canvas1" Grid.Row="1" Grid.Column="1" Margin="148,26,147,74" Grid.ColumnSpan="2">
+            <Canvas.Background>
+                <SolidColorBrush Color="Green"/>
+            </Canvas.Background>
+
+        </Canvas>
+        <Menu Grid.Row="0" Grid.ColumnSpan="3"  Height="25" VerticalAlignment="Top">
+            <MenuItem Header="File" Width="45">
+                    <MenuItem Header="New Task" />
+                    <MenuItem Header="Load task from file" />
+                    <Separator />
+                    <MenuItem Header="Exit" />
+            </MenuItem>
+        </Menu>
+
+        <Button Content="Points" VerticalAlignment="Center" Grid.Row="3" Grid.ColumnSpan="3" Width="100"/>
+
+    </Grid>
+
+    
+
+</Window>
