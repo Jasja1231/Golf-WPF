@@ -65,7 +65,18 @@ namespace GradedP4Lab5
              }
          }
 
+        //Closing appication on Exit
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
 
+        private void sizeSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            //
+        }
+
+       
 
        
 

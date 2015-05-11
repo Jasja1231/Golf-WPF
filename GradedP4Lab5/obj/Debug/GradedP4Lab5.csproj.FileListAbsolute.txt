@@ -11,3 +11,4 @@ h:\Windows7\Documents\Visual Studio 2012\Projects\GradedP4Lab5\GradedP4Lab5\obj\
 h:\Windows7\Documents\Visual Studio 2012\Projects\GradedP4Lab5\GradedP4Lab5\obj\Debug\GradedP4Lab5.csproj.GenerateResource.Cache
 h:\Windows7\Documents\Visual Studio 2012\Projects\GradedP4Lab5\GradedP4Lab5\obj\Debug\GradedP4Lab5.exe
 h:\Windows7\Documents\Visual Studio 2012\Projects\GradedP4Lab5\GradedP4Lab5\obj\Debug\GradedP4Lab5.pdb
+h:\Windows7\Documents\Visual Studio 2012\Projects\GradedP4Lab5\GradedP4Lab5\bin\Debug\Golfers.dll
