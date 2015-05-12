@@ -24,8 +24,15 @@ namespace GradedP4Lab5
         private   Point currentPoint = new Point();
         //default red (initial point color)
         private  bool golfer = false; 
+
         //List of all golfer points
         List<Golfers.Point> golfpoints = new List<Golfers.Point>();
+
+        private Point drag_point = new Point();
+
+
+        private static Point mousePos = new Point();
+
 
         public MainWindow()
         {
@@ -89,9 +96,30 @@ namespace GradedP4Lab5
             //
         }
 
+
+        private void Canvas_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            drag_point.X = Mouse.GetPosition(scrollViewer).X;
+            drag_point.Y = Mouse.GetPosition(scrollViewer).Y;
+            Canvas1.Cursor = Cursors.SizeAll;     
+        }
+
         private void Canvas_MouseMove(object sender, MouseEventArgs e)
         {
+            if (e.RightButton == MouseButtonState.Pressed) {
+                //get current mouse polition with relpect to scroll view
+                mousePos = e.GetPosition(scrollViewer);
 
+                double X = mousePos.X - drag_point.X;
+                double Y = mousePos.Y - drag_point.Y;
+
+                drag_point = mousePos;
+
+
+                scrollViewer.ScrollToHorizontalOffset(scrollViewer.HorizontalOffset + X);
+                scrollViewer.ScrollToVerticalOffset(scrollViewer.VerticalOffset + Y);
+
+            }
         }
 
         private void Canvas_Mouse_Enter(object sender, MouseEventArgs e)
@@ -99,14 +127,14 @@ namespace GradedP4Lab5
 
         }
 
-        private void Canvas_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
-        {
-
-        }
+        
 
         private void Canvas_MouseRightButtonUp(object sender, MouseButtonEventArgs e)
         {
-
+            scrollViewer.Cursor = Cursors.Arrow;
+            Mouse.Capture(null);
+            scrollViewer.ReleaseMouseCapture();
+            //Mouse.Capture(this);
         }
 
 
@@ -114,15 +142,15 @@ namespace GradedP4Lab5
         {
             if (e.Delta > 0)
             {
-                Canvas1.Width = Canvas1.Height = Canvas1.Height + e.Delta / 100;
-                sizeSlider.Value += e.Delta / 100;
+                Canvas1.Width = Canvas1.Height = Canvas1.Height + e.Delta * 0.03;
+                sizeSlider.Value += e.Delta * 0.03;
             }
 
-            else if (e.Delta < 0 && sizeSlider.Value + e.Delta / 100 >= 1)
+            else if (e.Delta < 0 && sizeSlider.Value + e.Delta * 0.03 >= 1)
             {
-                Canvas1.Width = Canvas1.Height = Canvas1.Height + e.Delta / 100;
-                sizeSlider.Value += e.Delta / 100;
-                if (sizeSlider.Value < (uint)(e.Delta / 100) + 1)
+                Canvas1.Width = Canvas1.Height = Canvas1.Height + e.Delta*0.03;
+                sizeSlider.Value += e.Delta * 0.03;
+                if (sizeSlider.Value < (uint)(e.Delta * 0.03) + 1)
                     sizeSlider.Value = 1;
             }
         }
@@ -140,6 +168,8 @@ namespace GradedP4Lab5
             golfpoints.Clear();
             Canvas1.Children.Clear();
         }
+
+
 
         
 
