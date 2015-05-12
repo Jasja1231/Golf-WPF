@@ -23,7 +23,9 @@ namespace GradedP4Lab5
         //try make it static later 
         private   Point currentPoint = new Point();
         //default red (initial point color)
-        private  bool color = false; 
+        private  bool golfer = false; 
+        //List of all golfer points
+        List<Golfers.Point> golfpoints = new List<Golfers.Point>();
 
         public MainWindow()
         {
@@ -35,20 +37,29 @@ namespace GradedP4Lab5
         {
             SolidColorBrush mySolidColorBrush = new SolidColorBrush();
             Ellipse el = new Ellipse();
+            Golfers.PointType Golfer_point = new Golfers.PointType();
 
-            //Choosing color
-            if (!color)
+
+            //Choosing color  & point type
+            if (!golfer)
+            {
                 mySolidColorBrush.Color = Colors.Red; // red
-            else 
+                Golfer_point = Golfers.PointType.Hole;
+            }
+            else { 
                 mySolidColorBrush.Color = Colors.Blue; //Blue
-            
-            color = !color;
+                Golfer_point = Golfers.PointType.Golfer;
+            }
+            golfer = !golfer;
 
             if (e.ChangedButton == MouseButton.Left) {
                 //getting coordinates of elipce with respect to canvas
                 currentPoint = e.GetPosition(Canvas1);
                 
-                
+                //Add new pont to list of all Golfer points with special position
+                golfpoints.Add(new Golfers.Point(currentPoint.X, currentPoint.Y, Golfer_point)); // - clean it after pressing NEW GAME
+
+
                 el.Fill = mySolidColorBrush;
 
                 // Set the width and height of the Ellipse.
@@ -62,14 +73,16 @@ namespace GradedP4Lab5
                     Canvas.SetLeft(el, currentPoint.X  - el.Width/2);
                     Canvas.SetTop(el, currentPoint.Y - el.Height/2);
                 }
-             }
-         }
+             }//if left press end
+        }
 
         //Closing appication on Exit
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
         }
+
+
 
         private void sizeSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
@@ -96,6 +109,43 @@ namespace GradedP4Lab5
 
         }
 
+
+        private void sizeSlider_MouseWheel(object sender, MouseWheelEventArgs e)
+        {
+            if (e.Delta > 0)
+            {
+                Canvas1.Width = Canvas1.Height = Canvas1.Height + e.Delta / 100;
+                sizeSlider.Value += e.Delta / 100;
+            }
+
+            else if (e.Delta < 0 && sizeSlider.Value + e.Delta / 100 >= 1)
+            {
+                Canvas1.Width = Canvas1.Height = Canvas1.Height + e.Delta / 100;
+                sizeSlider.Value += e.Delta / 100;
+                if (sizeSlider.Value < (uint)(e.Delta / 100) + 1)
+                    sizeSlider.Value = 1;
+            }
+        }
+
+
+        private void Window_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
+        {
+            sizeSlider_MouseWheel(sender, e);
+        }
+
+
+        //NEw game menu item clicked 
+        private void new_Game(object sender, RoutedEventArgs e)
+        {
+            golfpoints.Clear();
+            Canvas1.Children.Clear();
+        }
+
+        
+
+
+
+       
        
 
        
