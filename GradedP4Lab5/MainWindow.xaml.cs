@@ -76,6 +76,26 @@ namespace GradedP4Lab5
             //
         }
 
+        private void Canvas_MouseMove(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void Canvas_Mouse_Enter(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void Canvas_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void Canvas_MouseRightButtonUp(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
        
 
        
