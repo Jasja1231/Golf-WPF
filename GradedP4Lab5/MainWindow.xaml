@@ -12,31 +12,30 @@
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="338*"/>
+            <ColumnDefinition Width="157*"/>
         </Grid.ColumnDefinitions>
 
         <Slider Name="sizeSlider" SmallChange="1" LargeChange="2" Grid.Row="1" Grid.Column="0" Value="1"  Minimum="1" Maximum="23"  Orientation="Vertical" ValueChanged="sizeSlider_ValueChanged" MouseWheel="sizeSlider_MouseWheel"/>
         
-        <ScrollViewer Grid.Row="1" Grid.Column="1"  HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" Name="scrollViewer">
-            <Canvas MouseDown="Canvas_MouseDown_1" Height="200" Width="200"  Name="Canvas1"   Grid.ColumnSpan="2" MouseMove="Canvas_MouseMove" MouseEnter="Canvas_Mouse_Enter" MouseRightButtonDown="Canvas_MouseRightButtonDown" MouseRightButtonUp="Canvas_MouseRightButtonUp">
+        <ScrollViewer Grid.Row="1" Grid.Column="1"  HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible" Name="scrollViewer" Grid.ColumnSpan="2">
+            <Canvas MouseDown="Canvas_MouseDown_1"   Height="200" Width="200"  Name="Canvas1"   Grid.ColumnSpan="2" MouseMove="Canvas_MouseMove" MouseEnter="Canvas_Mouse_Enter" MouseRightButtonDown="Canvas_MouseRightButtonDown" MouseRightButtonUp="Canvas_MouseRightButtonUp">
                 <Canvas.Background>
                     <SolidColorBrush Color="LightGreen"/>
                 </Canvas.Background>
-                <Canvas.LayoutTransform>
-                    <ScaleTransform ScaleX="{Binding ElementName=sizeSlider, Path=Value, Mode=TwoWay}" ScaleY="{Binding ElementName=sizeSlider, Path=Value, Mode=TwoWay}"></ScaleTransform>
-                </Canvas.LayoutTransform>
-            </Canvas>
+              </Canvas>
         </ScrollViewer>
         <Menu Grid.Row="0" Grid.ColumnSpan="3"  Height="25" VerticalAlignment="Top">
             <MenuItem Header="File" Width="45">
-                <MenuItem Header="New Task" Click="new_Game" />
-                    <MenuItem Header="Load task from file" />
+                <MenuItem Header="New Task" Click="new_Game"/>
+                    <MenuItem Header="Load task from file" Click="Load_File"/>
+                <MenuItem Header="Save task to file" Click="Save_File"  />
                     <Separator />
-                    <MenuItem Header="Exit" />
+                <MenuItem Header="Exit" Click="MenuItem_Click" />
             </MenuItem>
         </Menu>
 
-        <Button Content="Points" VerticalAlignment="Center" Grid.Row="3" Grid.ColumnSpan="3" Width="100"/>
+        <Button Content="Points" VerticalAlignment="Center" Grid.Row="2" Width="100" Click="Button_Click" Grid.Column="1" Margin="186,4,52.179,4"/>
 
     </Grid>
 

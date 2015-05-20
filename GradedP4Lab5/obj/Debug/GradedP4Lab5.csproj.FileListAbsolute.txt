@@ -12,3 +12,16 @@ h:\Windows7\Documents\Visual Studio 2012\Projects\GradedP4Lab5\GradedP4Lab5\obj\
 h:\Windows7\Documents\Visual Studio 2012\Projects\GradedP4Lab5\GradedP4Lab5\obj\Debug\GradedP4Lab5.exe
 h:\Windows7\Documents\Visual Studio 2012\Projects\GradedP4Lab5\GradedP4Lab5\obj\Debug\GradedP4Lab5.pdb
 h:\Windows7\Documents\Visual Studio 2012\Projects\GradedP4Lab5\GradedP4Lab5\bin\Debug\Golfers.dll
+C:\Users\Home\Documents\GitHub\Golf-WPF\GradedP4Lab5\bin\Debug\GradedP4Lab5.exe.config
+C:\Users\Home\Documents\GitHub\Golf-WPF\GradedP4Lab5\obj\Debug\GradedP4Lab5.exe
+C:\Users\Home\Documents\GitHub\Golf-WPF\GradedP4Lab5\obj\Debug\GradedP4Lab5.pdb
+C:\Users\Home\Documents\GitHub\Golf-WPF\GradedP4Lab5\bin\Debug\GradedP4Lab5.exe
+C:\Users\Home\Documents\GitHub\Golf-WPF\GradedP4Lab5\bin\Debug\GradedP4Lab5.pdb
+C:\Users\Home\Documents\GitHub\Golf-WPF\GradedP4Lab5\obj\Debug\GradedP4Lab5.csprojResolveAssemblyReference.cache
+C:\Users\Home\Documents\GitHub\Golf-WPF\GradedP4Lab5\obj\Debug\MainWindow.baml
+C:\Users\Home\Documents\GitHub\Golf-WPF\GradedP4Lab5\obj\Debug\MainWindow.g.cs
+C:\Users\Home\Documents\GitHub\Golf-WPF\GradedP4Lab5\obj\Debug\App.g.cs
+C:\Users\Home\Documents\GitHub\Golf-WPF\GradedP4Lab5\obj\Debug\GradedP4Lab5_MarkupCompile.cache
+C:\Users\Home\Documents\GitHub\Golf-WPF\GradedP4Lab5\obj\Debug\GradedP4Lab5.g.resources
+C:\Users\Home\Documents\GitHub\Golf-WPF\GradedP4Lab5\obj\Debug\GradedP4Lab5.Properties.Resources.resources
+C:\Users\Home\Documents\GitHub\Golf-WPF\GradedP4Lab5\obj\Debug\GradedP4Lab5.csproj.GenerateResource.Cache
